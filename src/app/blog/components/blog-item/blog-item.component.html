@@ -1,1 +1,25 @@
-<p>blog-item works!</p>
+<mat-card>
+    <div class="blog-card">
+    <div class="this-item">
+        <b>ID:</b> {{blog?.id}}
+    </div>
+    <div class="this-item">
+        <b>Title: </b> {{blog?.title}}
+    </div>
+    <div class="this-item">
+        <b>Description: </b> {{blog?.description}}
+    </div>
+    <div class="this-item">
+        <b>Author: </b>{{blog?.author}}
+    </div>
+    <div class="this-item">
+        <b>Comments: </b>{{blog?.comments}}
+    </div>
+    <div class="center">
+        <button mat-raised-button (click)="delete(24)">Delete</button>
+        <button mat-raised-button (click)="edit(24)">Edit</button>
+    </div>
+</div>
+
+
+</mat-card>

@@ -1,1 +1,7 @@
-<p>book-list works!</p>
+<h2>
+    List of Books
+</h2>
+
+<div *ngFor="let book of books" class="this-list">
+    <app-book-item [book]="book" (Emitter)="loveAction($event)"></app-book-item>
+</div>

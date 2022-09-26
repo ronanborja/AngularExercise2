@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'simple-crud';
+  title = 'Exercise 3';
+  date = new Date();
+  currentDollarPrice = 58.75;
 }

@@ -1,1 +1,24 @@
-<p>book-item works!</p>
+<mat-card>
+    <div class="this-card">
+        <div class="this-item">
+            <b>ID:</b> {{book?.id}}
+        </div>
+
+        <div class="this-item">
+            <b>Name:</b> {{book?.name}}
+        </div>
+
+        <div class="this-item">
+            <b>Authors: </b>{{book?.authors}}
+        </div>
+
+        <div class="this-item">
+            <b>ISBN: </b>{{book?.isbn}}
+        </div>
+
+        <div class="center">
+            <button mat-raised-button (click)="delete(23)">Delete</button>
+            <button mat-raised-button (click)="edit(21)">Edit</button>
+        </div>
+    </div>
+</mat-card>

@@ -1,1 +1,5 @@
-<p>blog-list works!</p>
+<h2 class="subheading">List of Blogs</h2>
+    
+<div *ngFor="let blog of blogs" class="this-list">
+    <app-blog-item [blog]="blog" (Emitter)="loveAction($event)"></app-blog-item>
+</div>
