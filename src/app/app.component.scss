@@ -1,26 +1,12 @@
-button {
-   margin: 1rem; 
-   color:#fff;
-   background-color: #0a0a23;
-}
-button:hover{
-    background-color: #ffff;
-    color: #0a0a23;
-}
-
-.navbuttons {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
 .details {
     display: flex;
     text-align: center;
     margin: 20px;
     justify-content: space-between;
 }
-
 .main-head {
     text-align: center;
+    font-size: 35px;
+    text-shadow: 3px 2px 3px rgb(110, 108, 108);
+
 }

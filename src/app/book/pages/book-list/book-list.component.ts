@@ -17,8 +17,10 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this.list.getBooks();
   }
+
   loveAction(book:Book){
     console.log(book.id);
   }
+
 
 }

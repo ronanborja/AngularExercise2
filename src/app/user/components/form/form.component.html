@@ -8,24 +8,36 @@
             </div>
             <div class="panel-body">
                 <form #userForm="ngForm" (ngSubmit)="submit()">
-                    <!-- {{model|json}} -->
+                    {{model|json}} 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input [(ngModel)]="model.email" type="text" name="email" id="email" class="form-control"
+                        <input [(ngModel)]="model.email" type="text" #email="ngModel" name="email" id="email" class="form-control"
                             required>
+                            <div [hidden]="email.valid" class="alert alert-danger">
+                                Email is required
+                            </div>
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input [(ngModel)]="model.name" type="text" name="name" id="name" class="form-control" required>
+                        <input [(ngModel)]="model.name" type="text" #name="ngModel" name="name" id="name" class="form-control" required>
+                        <div [hidden]="name.valid" class="alert alert-danger">
+                            Name is required
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="bio">Age</label>
-                        <input [(ngModel)]="model.age" type="text" name="bio" id="bio" class="form-control" required>
+                        <label for="bio">Bio</label>
+                        <input [(ngModel)]="model.bio" type="text" #bio="ngModel" name="bio" id="bio" class="form-control" required>
+                        <div [hidden]="bio.valid" class="alert alert-danger">
+                            Bio is required
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="active">Active</label>
-                        <input [(ngModel)]="model.active" type="text" name="active" id="active" class="form-control"
+                        <input [(ngModel)]="model.active" #active="ngModel" type="text" name="active" id="active" class="form-control"
                             required>
+                            <div [hidden]="active.valid" class="alert alert-danger">
+                                This field is required
+                            </div>
                     </div>
                     <div class="form-group button-center">
                         <button type="submit" mat-raised-button class="submit-button">Submit</button>

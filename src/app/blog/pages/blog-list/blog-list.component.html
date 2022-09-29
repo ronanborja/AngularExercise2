@@ -1,5 +1,5 @@
-<h2 class="subheading">List of Blogs</h2>
-    
+<h2 class="subheading">BLOGS</h2>
+<app-command-bar></app-command-bar>
 <div *ngFor="let blog of blogs" class="this-list">
     <app-blog-item [blog]="blog" (Emitter)="loveAction($event)"></app-blog-item>
 </div>

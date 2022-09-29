@@ -1,18 +1,13 @@
+<app-header></app-header>
 <div>
     <div class="details">
         <div>{{date | date: 'long'}}</div>
         <div>Current Dollar Price: {{currentDollarPrice | currency: 'PHP'}}</div>
     </div>
 
-    <div class="mat-display-4 main-head">
+    <div class="mat-display-2 main-head"> 
         {{title}}
     </div>
-</div>
-<div class="navbuttons">
-    <button mat-raised-button color="primary" routerLink="/">Home</button>
-    <button mat-raised-button color="primary" routerLink="/book">Books</button>
-    <button mat-raised-button color="primary" routerLink="/blog">Blogs</button>
-    <button mat-raised-button color="primary" routerLink="/user">Profile</button>
 </div>
 
 <router-outlet></router-outlet>

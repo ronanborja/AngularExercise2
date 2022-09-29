@@ -1,0 +1,95 @@
+<!-- Blog Form-->
+<div class="w-full items-center flex justify-center mt-6 pb-8">
+    <form
+      [formGroup]="blogForm"
+      class="bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96"
+    >
+      <!-- Form Heading -->
+      <div class="grid place-items-center">
+        <h2
+          class="py-4 text-6xl font-normal leading-normal text-gray-100 md:flex md:items-center my-6"
+        >
+          {{title.toUpperCase()}}
+        </h2>
+      </div>
+  
+      <!-- Blog Title -->
+      <div class="mb-4 form-group">
+        <label for="title" class="block text-gray-200 text-sm mb-2">
+          Title:</label>
+        <input
+          type="text"
+          formControlName="title"
+          placeholder="Enter blog title"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
+        />
+        <div *ngIf="blogTitle?.errors?.['minlength']" class="alert alert-danger">
+          Minimum Length: 2
+        </div>
+        <div *ngIf="blogTitle?.errors?.['maxlength']" class="alert alert-danger">Maximum Length: 28 </div>
+      </div>
+
+      <!-- Blog Description -->
+      <div class="mb-4 form-group">
+        <label for="description" class="block text-gray-200 text-sm mb-2">
+          Description:</label>
+        <input
+          type="text"
+          formControlName="description"
+          placeholder="Enter blog description"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
+        />
+        <div *ngIf="description?.errors?.['minlength']" class="alert alert-danger">
+          Minimum Length: 2
+        </div>
+        <div *ngIf="description?.errors?.['maxlength']" class="alert alert-danger">Maximum Length: 28 </div>
+      </div>
+
+      <!-- Blog Author -->
+      <div class="mb-4 form-group">
+        <label for="author" class="block text-gray-200 text-sm mb-2">
+          Author:</label>
+        <input
+          type="text"
+          formControlName="author"
+          placeholder="Enter blog author"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
+        />
+        <div *ngIf="author?.errors?.['minlength']" class="alert alert-danger">
+          Minimum Length: 2
+        </div>
+        <div *ngIf="author?.errors?.['maxlength']" class="alert alert-danger">Maximum Length: 28 </div>
+      </div>
+  
+      <!-- Comments -->
+      <ng-container formArrayName="addNewComment">
+          <!-- Label: -->
+          <label for="comment" class=" block text-gray-200 text-sm mb-2"
+          >Comment:</label>
+          <div *ngFor="let _ of ff.controls; index as i" class="input-group">
+              <!-- Textbox -->
+              <div class="flex w-full mb-4 ">
+                  <input [formControlName] ="i" placeholder="Enter a comment"
+                  class="shadow appearance-none border rounded p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control col-span-5" required
+                />
+                  <button type="button" class="bg-red-700 p-2" (click)="deleteComment(i)"><mat-icon>delete</mat-icon></button>
+              </div>
+          </div>
+          <div class="grid place-items-center">
+              <button class="bg-gray-700 hover:bg-black text-white py-2 px-4 rounded-md cursor-pointer mb-4" (click)="addComment()">Add Comment</button>
+          </div>
+          
+      </ng-container>
+  
+  
+      <!-- Submit -->
+      <div class="grid place-items-center ">
+        <input
+          type="submit"
+          value="Add Blog"
+          class="bg-gray-700 hover:bg-black text-white  py-2 px-4 rounded-lg cursor-pointer"
+        />
+      </div>
+    </form>
+  </div>
+  

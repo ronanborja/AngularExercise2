@@ -5,22 +5,30 @@ import { BookRoutingModule } from './book-routing.module';
 import { BookListComponent } from './pages/book-list/book-list.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BookFormComponent } from './pages/book-form/book-form.component';
+import { MatIconModule } from '@angular/material/icon';
+
 const MaterialComponents = [
   MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatIconModule
 ];
 
 @NgModule({
   declarations: [
     BookListComponent,
-    BookItemComponent
-    
-    
+    BookItemComponent,
+    BookFormComponent 
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     BookRoutingModule,
+    SharedModule,
     [MaterialComponents]
+  
   ]
 })
 export class BookModule { }

@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogItemComponent } from './blog/components/blog-item/blog-item.component';
-import { BookItemComponent } from './book/components/book-item/book-item.component';
-import { UserModule } from './user/user.module';
+import { BlogFormComponent } from './blog/pages/blog-form/blog-form.component';
+import { BookFormComponent } from './book/pages/book-form/book-form.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/blog',
+    pathMatch: 'full'
+  },
   {
     path: 'book',
     loadChildren: () => import('./book/book.module').then(m => m.BookModule)
@@ -17,6 +21,14 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  },
+  {
+    path: 'book/form',
+    component: BookFormComponent
+  },
+  {
+    path: "blog/form",
+    component: BlogFormComponent
   }
 ];
 

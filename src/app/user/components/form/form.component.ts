@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
     {
       email: 'ronanborja1205@gmail.com',
       name: 'Ronan Borja',
-      age: 21,
+      bio: 'In a relationship with CMG',
       active: true
     };
 

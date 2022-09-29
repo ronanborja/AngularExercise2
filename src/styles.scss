@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #121212; color: white; }
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #1E293B; 
+    color: white; 
+}
 
 h2 {
     text-align: center;
-    margin: 2rem;
-}
+    margin: 2rem; 
+} 
 .subheading {
     font-size: 48px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,18 +22,14 @@ h2 {
     justify-content: center;
     padding: 20px;
 }
+
+
 .this-card {
     border-radius: 1.5%;
     padding: 1rem;
-    width: 400px;
-  
-}
-.blog-card {
-   
-    border-radius: 1.5%;
-    padding: 1rem;
-    width: 400px;
-  
+    width: 400px; 
+    background-color: #0F172A;
+    box-shadow: 0 -5px 3px -3px rgb(213, 211, 211), 0 5px 3px -3px rgb(213, 211, 211);
 }
 
 .form-card {
@@ -36,10 +38,10 @@ h2 {
     width: 400px;
 }
 
-.center button:hover {
-    background-color: #fff;
-    color: #0a0a23;
-}
+// .center button:hover {
+//     background-color: #fff;
+//     color: #0a0a23;
+// }
 
 .container  {
     display: flex;
@@ -51,13 +53,29 @@ h2 {
     margin: 2rem;
    
 }
-.center button {
+
+.henshu {
+    margin: 20px ;
+    text-align: center;
+    top:50%;
+    background-color:rgb(137, 0, 0);
+    color: #fff;
+    width: 95px;
+    height: 35px;
+    border-radius: 6px;
+    margin-left: 10px; 
+}
+
+
+.shokyu { 
     margin: 20px ;
     text-align: center;
     top:50%;
     background-color:#0a0a23;
     color: #fff;
-   
+    width: 95px;
+    height: 35px;
+    border-radius: 6px;
 }
 
 
@@ -73,6 +91,6 @@ h2 {
 .this-item {
     padding: 0.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: white;
     font-size: 16px;
 }

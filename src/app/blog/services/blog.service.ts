@@ -34,5 +34,9 @@ export class BlogService {
   getBlogs() {
     return this.blogs
   }
+
+  getBlog(id:number):Blog|undefined{
+    return this.blogs.find(blog => blog.id === id)
+  }
   
 }

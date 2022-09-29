@@ -1,5 +1,4 @@
-<mat-card>
-    <div class="blog-card">
+<div class="this-card">
     <div class="this-item">
         <b>ID:</b> {{blog?.id}}
     </div>
@@ -16,10 +15,7 @@
         <b>Comments: </b>{{blog?.comments}}
     </div>
     <div class="center">
-        <button mat-raised-button (click)="delete(24)">Delete</button>
-        <button mat-raised-button (click)="edit(24)">Edit</button>
+        <button class="shokyu" (click)="delete(24)">Delete</button>
+        <button class="henshu" (click)="edit(24)">Edit</button>
     </div>
-</div>
-
-
-</mat-card>
+</div> 
